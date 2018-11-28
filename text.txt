@@ -8,4 +8,7 @@ siedmy riadok
 osmy riadok
 
 desiaty riadok
+<<<<<<< HEAD
 jedenasty riadok
+=======
+>>>>>>> 03dbda4a238736a9a10bc0c6fa72528bf1d65fb1
