@@ -10,6 +10,8 @@
 </br>
 <input type="submit" name="submit" value="Upload File"> 
 </form>
+
 </html>
 <?php
+readfile("test.txt");
 ?>
