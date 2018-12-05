@@ -9,22 +9,6 @@ if ($conn->connect_error) {
         die('Connection fialed: ');
 }
 echo 'Connected successfully';
-
-
-$sql = "SELECT id, autor, obsah FROM prispevky";
-$result = $conn->query($sql);
-
-if ($result->num_rows > 0) {
-    // output data of each row
-    while($row = $result->fetch_assoc()) {
-        echo "id: " . $row["id"]. " - Name: " . $row["autor"]. " " . $row["obsah"]. "<br>";
-    }
-} else {
-    echo "0 results";
-}
-$conn->close();
-
-
 ?>
 <html>
 <b>HOME</b>
@@ -38,6 +22,31 @@ $conn->close();
 </form>
 
 </html>
+
+<?php
+
+$sql = "SELECT id, autor, obsah FROM prispevky ORDER BY id DESC";
+$result = $conn->query($sql);
+$iterator = count($result->num_rows);
+if ($result->num_rows > 0) {
+//function rekurzia(){
+//if ($row[){
+//        echo "id: " . $i["id"]. " - autor: " . $i["autor"]. " " . $i["obsah"]. "<br>";
+//    }else{
+//	$row = $result->fetch_assoc();
+//}
+
+    while($row = $result->fetch_assoc()) {
+        echo "id: " . $row["id"]. " - autor: " . $row["autor"]. " " . $row["obsah"]. "<br>";
+//	  pole
+    }
+} else {
+    echo "0 results";
+}
+$conn->close();
+
+
+?>
 
 
 
