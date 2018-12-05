@@ -40,23 +40,24 @@ echo 'Connected successfully';
 
 $sql = "SELECT id, autor, obsah FROM prispevky ORDER BY id DESC";
 $result = $conn->query($sql);
-//$iterator = count($result->num_rows);
+$iterator = count($result->num_rows);
 if ($result->num_rows > 0) {
-    //function rekurzia(){
-    //if ($row[){
-    // echo "id: " . $i["id"]. " - autor: " . $i["autor"]. " " . $i["obsah"]. "<br>";
-    //  }else{
-    //$row = $result->fetch_assoc();
-    //}
+//function rekurzia(){
+//if ($row[){
+//        echo "id: " . $i["id"]. " - autor: " . $i["autor"]. " " . $i["obsah"]. "<br>";
+//    }else{
+//	$row = $result->fetch_assoc();
+//}
 
-    while ($row = $result->fetch_assoc()) {
-        echo "id: ".$row["id"]. " - autor: ".$row["autor"]." ".$row["obsah"]."<br>";
-        //pole
+    while($row = $result->fetch_assoc()) {
+        echo "id: " . $row["id"]. " - autor: " . $row["autor"]. " " . $row["obsah"]. "<br>";
+//	  pole
     }
 } else {
     echo "0 results";
-
 }
-$row = $result->fetch_assoc();
 $conn->close();
+
+
 ?>
+
