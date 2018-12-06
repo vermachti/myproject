@@ -4,3 +4,6 @@
 >- najprv upload filov
 >- potom manipulaciu s databazou
 >- pokusim sa o model viewer controller pristup
+
+>TODO
+>- validator do inputoveho pola, aby nedovolil '' vstupy
