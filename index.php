@@ -42,16 +42,8 @@ if ($result->num_rows > 0) {
     }
 } else {
     echo "0 results";
+
 }
+$row = $result->fetch_assoc();
 $conn->close();
-
-
 ?>
-
-
-
-
-
-
-
-
