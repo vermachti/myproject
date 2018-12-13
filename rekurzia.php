@@ -32,10 +32,10 @@ function rekurzia()
 {
     $row = $result->fetch_assoc();
     if ($row == 0) {
-         return;
+        return;
     } else {
-         echo "id: ".$row["id"]. " - autor: ".$row["autor"]." ".$row["obsah"]."<br>";
-         rekurzia();
+        echo "id: " . $row["id"]. " - autor: " . $row["autor"]. " " . $row["obsah"]. "<br>";
+        rekurzia();
     }
 }
  rekurzia();
