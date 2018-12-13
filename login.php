@@ -1,7 +1,7 @@
 <?php
 $dbhost = 'localhost';
 $username = 'root';
-$password = 'Ephesus clearness marshes breast';
+$password = 'ww';
 $dbname = 'portfolio';
 $conn = new mysqli($dbhost, $username, $password, $dbname);
 
