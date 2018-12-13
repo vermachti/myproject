@@ -1,7 +1,18 @@
 <?php 
+/**
+ * Formular na pridavanie poloziek do databazy
+ * 
+ * PHP version 7.2.5
+ * 
+ * @category PHP
+ * @package  PHP_CodeSniffer
+ * @author   Michal Fedor <michal.rodef@gmail.com>
+ * @license  http://matrix.squiz.net/developer/tools/php_cs/licence BSD Licence
+ * @link     http://pear.php.net/package/PHP_CodeSniffer
+ */
 $dbhost = 'localhost';
 $username = 'root';
-$password = 'Ephesus clearness marshes breast';
+$password = 'ww';
 $dbname = 'portfolio';
 $conn = new mysqli($dbhost, $username, $password, $dbname);
 
@@ -27,18 +38,18 @@ echo 'Connected successfully';
 
 $sql = "SELECT id, autor, obsah FROM prispevky ORDER BY id DESC";
 $result = $conn->query($sql);
-$iterator = count($result->num_rows);
+//$iterator = count($result->num_rows);
 if ($result->num_rows > 0) {
-//function rekurzia(){
-//if ($row[){
-//        echo "id: " . $i["id"]. " - autor: " . $i["autor"]. " " . $i["obsah"]. "<br>";
-//    }else{
-//	$row = $result->fetch_assoc();
-//}
+    //function rekurzia(){
+    //if ($row[){
+    // echo "id: " . $i["id"]. " - autor: " . $i["autor"]. " " . $i["obsah"]. "<br>";
+    //  }else{
+    //$row = $result->fetch_assoc();
+    //}
 
-    while($row = $result->fetch_assoc()) {
-        echo "id: " . $row["id"]. " - autor: " . $row["autor"]. " " . $row["obsah"]. "<br>";
-//	  pole
+    while ($row = $result->fetch_assoc()) {
+        echo "id: ".$row["id"]. " - autor: ".$row["autor"]." ".$row["obsah"]."<br>";
+        //pole
     }
 } else {
     echo "0 results";
