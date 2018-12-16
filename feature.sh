@@ -1,2 +1,2 @@
-echo -e "Hello\n World!!"
-echo ok?
+#!/bin/bash
+echo ahoj;
