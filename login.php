@@ -1,7 +1,9 @@
 <?php
 $dbhost = 'localhost';
 $username = 'root';
-$password = 'ww';
+$heslo = fopen("password.txt", "r");
+$password = fgets($heslo);
+fclose($heslo);
 $dbname = 'portfolio';
 $conn = new mysqli($dbhost, $username, $password, $dbname);
 
