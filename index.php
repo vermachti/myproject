@@ -12,12 +12,22 @@
  */
 $dbhost = 'localhost';
 $username = 'root';
+<<<<<<< HEAD
 $password = 'ww';
+=======
+$heslo = fopen("password.txt", "r");
+$password = fgets($heslo);
+fclose($heslo);
+>>>>>>> 76aca295e3b6357dc5c0b5e704b89139dae285e6
 $dbname = 'portfolio';
 $conn = new mysqli($dbhost, $username, $password, $dbname);
 
 if ($conn->connect_error) {
+<<<<<<< HEAD
         die('Connection fialed: ');
+=======
+        die('Connection fialed: ' . $conn->connect_error);
+>>>>>>> 76aca295e3b6357dc5c0b5e704b89139dae285e6
 }
 echo 'Connected successfully';
 ?>
@@ -58,3 +68,7 @@ if ($result->num_rows > 0) {
 $row = $result->fetch_assoc();
 $conn->close();
 ?>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 76aca295e3b6357dc5c0b5e704b89139dae285e6
