@@ -24,6 +24,9 @@ if ($conn->connect_error) {
 echo 'Connected successfully';
 ?>
 <html>
+<head>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+</head>
 <b>HOME</b>
 </br>
 <a href="stiahni.php"><i>stiahni</i></a>
