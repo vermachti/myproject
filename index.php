@@ -4,11 +4,11 @@
  * 
  * PHP version 7.2.5
  * 
- * @category PHP
- * @package  PHP_CodeSniffer
+ * @category Index.php
+ * @package  Interface?
  * @author   Michal Fedor <michal.rodef@gmail.com>
- * @license  http://matrix.squiz.net/developer/tools/php_cs/licence BSD Licence
- * @link     http://pear.php.net/package/PHP_CodeSniffer
+ * @license  https://www.gnu.org/licenses/gpl-3.0.en.html GPL
+ * @link     https://github.com/vermachti/vermachti.github.io/blob/release/login.php
  */
 $dbhost = 'localhost';
 $username = 'root';
@@ -63,4 +63,3 @@ if ($result->num_rows > 0) {
 $row = $result->fetch_assoc();
 $conn->close();
 ?>
-
